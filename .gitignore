@@ -185,6 +185,8 @@ app/templates_BBS/footage
 unsused scripts/
 Three-Structure.ps1
 Tree_Structure.txt
+.calculate_project_size.ps1
+
 
 # Weights and binaries
 weights/

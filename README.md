@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> b860ac0 (Initial commit)
 # B-Star
 The B-Star app is built on a Django server and provides a seamless experience for rendering images and creating realistic 3D parallax effects. It automatically installs the required conda environment within the project folder and sets the environment variables for ffmpeg, a video encoder.
-=======
+
 
 # B-Star App
 
@@ -85,5 +82,3 @@ After running the app, you can test it by opening the following link in your bro
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ---
-
-"# B-Star" 
