@@ -9,12 +9,17 @@ The B-Star app is built on a Django server and provides a seamless experience fo
 
 The B-Star app is built on a Django server and provides a seamless experience for rendering images and creating realistic 3D parallax effects. It automatically installs the required conda environment within the project folder and sets the environment variables for ffmpeg, a video encoder.
 
+## Demo
+
+http://130.204.72.81:9000/home
+
+
 ## Folder Structure
 
 - **Main Folder:** `C:\B-Star`
 - **Temporary Blender's Cache Folder:** `C:\tmp`
-- **Media Folder:** `C:\B-Star\billboardstar_2\app\media`
-- **Ready Videos Storage:** `C:\B-Star\billboardstar_2\app\media\ready`
+- **Media Folder:** `C:\B-Star\app\media`
+- **Ready Videos Storage:** `C:\B-Star\app\media\ready`
 
 ## Features
 
@@ -43,7 +48,7 @@ The B-Star app is built on a Django server and provides a seamless experience fo
 
 ## Configuration
 
-Add the following values to your `settings.py` file located at `C:\B-Star\billboardstar_2\app\app\settings.py`:
+Add the following values to your `settings.py` file located at `C:\B-Star\app\app\settings.py`:
 
 ```python
 EMAIL_HOST_USER = 'sender@gmail.com'
@@ -74,7 +79,7 @@ After running the app, you can test it by opening the following link in your bro
 ## Additional Information
 
 - **Rendered Image Cache:** Rendered images from Blender are cached in the `C:\tmp` folder.
-- **Temporary Storage:** Uploaded photos appear in `C:\B-Star\billboardstar_2\app\media\image_in_use` temporarily during processing.
+- **Temporary Storage:** Uploaded photos appear in `C:\B-Star\app\media\image_in_use` temporarily during processing.
 
 - **YouTube:** https://youtu.be/J1lA7NLmSWA
 
