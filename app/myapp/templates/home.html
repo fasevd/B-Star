@@ -1,0 +1,128 @@
+<!--home.html-->
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Billboard Star</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <span>User: {{ email }}</span>
+        <form action="{% url 'logout' %}" method="post" class="float-right">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-secondary btn-sm">Logout</button>
+        </form>
+    </nav>
+
+    <div class="container mt-5" style="padding-top: 70px;">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="mb-4">Upload images, subjects centered.</h5>
+                <!-- Including the requirements.svg image -->
+                <div class="text-left" style="margin: 0;">
+                    <img src="{% static 'requirements.svg' %}" alt="Requirements" />
+                </div>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {% for field in form %}
+                            <div>
+                                {{ field.label_tag }}
+                                {{ field }}
+                                {% if field.name != "template" %}
+                                <div class="image-preview" style="display: none; height: 100px;">
+                                    <img id="{{ field.name }}-preview" src="#" alt="{{ field.label }} Preview" style="display: none; height: 100px; width: auto;">
+                                </div>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </form>
+
+                {% if messages %}
+                <div class="alert alert-info mt-3">
+                    {% for message in messages %}
+                    <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Script to preview images -->
+    <script>
+
+        $(document).ready(function() {
+            var enableAutoScroll = true;
+
+            $(window).on('scroll', function() {
+                enableAutoScroll = false;
+                clearTimeout($.data(this, 'scrollTimer'));
+                $.data(this, 'scrollTimer', setTimeout(function() {
+                    enableAutoScroll = true;
+                }, 2000)); // Wait 1 second after manual scrolling before resuming auto-scrolling
+            });
+
+            setInterval(function() {
+                if (enableAutoScroll) {
+                    $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+                }
+            }, 1000);
+        });
+
+
+
+
+
+
+        // $(document).ready(function() {
+        //     setInterval(function() {
+        //         $("html, body").animate({ scrollTop: $(document).height() }, 2500);
+        //     }, 1000);
+        // });
+
+        // $(document).ready(function() {
+        //     setInterval(function() {
+        //         window.scrollTo(0,document.body.scrollHeight);
+        //     }, 1000); // Scroll to the bottom every second
+        // });
+
+
+
+        function readURL(input, previewId) {
+            var imagePreviewDiv = $(previewId).parent();
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $(previewId).attr('src', e.target.result);
+                    $(previewId).css('display', 'block');
+                    imagePreviewDiv.css('display', 'block'); // Show the preview div
+                }
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                $(previewId).css('display', 'none');
+                imagePreviewDiv.css('display', 'none'); // Hide the preview div if no file is selected
+            }
+        }
+        $(document).ready(function(){
+            $("input[type='file']").change(function(){
+                readURL(this, '#' + this.name + '-preview');
+            });
+            $("form").submit(function(){
+                $(":submit").attr("disabled", true);
+
+
+                return true;
+            });
+        });
+    </script>
+</body>
+</html>
+
