@@ -11,6 +11,7 @@ The application allows users to upload images, which are then processed and rend
 - **Celery**: Manages task queues efficiently, enabling the handling of asynchronous tasks.
 - **Redis**: Provides high-speed caching, ensuring quick access to frequently used data.
 - **Blender Controller**: Specially written application controls Blender software for rendering products, creating short video clips with realistic 3D parallax effects.
+- **AI Background Removal and 3D Rendering:** Uploaded photos are processed to remove backgrounds with rembg, rendered in a 3D environment, and the final result is a realistic and perspective-accurate parallax effect.
 
 ## Functionality
 
