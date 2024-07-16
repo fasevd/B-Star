@@ -186,7 +186,7 @@ unsused scripts/
 Three-Structure.ps1
 Tree_Structure.txt
 .calculate_project_size.ps1
-dump.rdb
+
 
 # Weights and binaries
 weights/
@@ -202,9 +202,11 @@ weights/*.rdb
 # OS generated files
 .DS_Store
 Thumbs.db
-
-
+# Media
+app/media/images/* 
+app/media/ready/*
 
 
 
 >>>>>>> 3bf6bcc (Initial commit)
+
