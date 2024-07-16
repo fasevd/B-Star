@@ -1,13 +1,19 @@
+---
 
-# B-Star
-The B-Star app is built on a Django server and provides a seamless experience for rendering images and creating realistic 3D parallax effects. It automatically installs the required conda environment within the project folder and sets the environment variables for ffmpeg, a video encoder.
+# B-Star (Billboard Star)
 
+B-Star is a powerful application built on a Django server, offering a seamless experience for rendering images and creating realistic 3D parallax effects. By leveraging a variety of advanced technologies, B-Star ensures optimal performance and functionality.
 
-# B-Star App
+The application allows users to upload images, which are then processed and rendered into short video clips with stunning 3D parallax effects. The workflow is managed efficiently by Celery for task queue management and Redis for high-speed caching, ensuring that tasks are handled asynchronously and with minimal latency
 
-## Overview
+## Components
+- **Django Server**: Powers the core functionalities of the app, ensuring robust and scalable performance.
+- **Celery**: Manages task queues efficiently, enabling the handling of asynchronous tasks.
+- **Redis**: Provides high-speed caching, ensuring quick access to frequently used data.
+- **Blender Controller**: Specially written application controls Blender software for rendering products, creating short video clips with realistic 3D parallax effects.
 
-The B-Star app is built on a Django server and provides a seamless experience for rendering images and creating realistic 3D parallax effects. It automatically installs the required conda environment within the project folder and sets the environment variables for ffmpeg, a video encoder.
+## Functionality
+
 
 ## Demo
 
