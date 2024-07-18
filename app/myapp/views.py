@@ -20,7 +20,7 @@ def enter_email(request):
     if request.method == 'POST':
         request.session.update({
             'email': request.POST.get('email'),  # Store email in session
-            'code': get_random_string(length=2, allowed_chars='0123456789')
+            'code': get_random_string(length=4, allowed_chars='0123456789')
             # 'code': get_random_string(length=4)  # Store code in session
         })
         request.session.modified = True  # Mark session as modified to ensure changes are saved
