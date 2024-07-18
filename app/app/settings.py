@@ -114,8 +114,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'fasevd33@gmail.com'
-# EMAIL_HOST_PASSWORD = 'tidxkkkungaqtwjq'
+# EMAIL_HOST_USER = 'google_email@gmail.com'
+# EMAIL_HOST_PASSWORD = 'Manage your google acount -->Security-->2 Step verification(turn on)-->Search for "App Passwords'
 
 # Import email credentials
 from .credentials import EMAIL_HOST_USER, EMAIL_HOST_PASSWORD
