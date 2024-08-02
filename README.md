@@ -18,7 +18,8 @@ The application allows users to upload images, which are then processed and rend
 
 ## Demo
 
-http://130.204.72.81:9000/home
+blackowl.ddns.net:9000
+blackowl.ddns.net:8000
 
 
 ## Folder Structure
