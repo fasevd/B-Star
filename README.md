@@ -18,8 +18,8 @@ The application allows users to upload images, which are then processed and rend
 
 ## Demo
 
-http://blackowl.ddns.net:9000
-http://blackowl.ddns.net:8000
+- [http://blackowl.ddns.net:9000](http://blackowl.ddns.net:9000)
+- [http://blackowl.ddns.net:9000](http://blackowl.ddns.net:9000)
 
 
 ## Folder Structure
