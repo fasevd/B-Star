@@ -67,7 +67,7 @@ EMAIL_HOST_PASSWORD = 'Ask_google_email_settings_automatic_app_authorization'
 
 1. Clone the repository to your C drive:
    ```sh
-   git clone <repository_url> C:\B-Star
+   git clone https://github.com/fasevd/Billboard-Star.git C:\B-Star
    ```
 
 2. Navigate to the main folder:
