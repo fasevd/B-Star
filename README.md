@@ -89,7 +89,7 @@ After running the app, you can test it by opening the following link in your bro
 - **Rendered Image Cache:** Rendered images from Blender are cached in the `C:\tmp` folder.
 - **Temporary Storage:** Uploaded photos appear in `C:\B-Star\app\media\image_in_use` temporarily during processing.
 
-- **YouTube:** https://youtu.be/J1lA7NLmSWA
+- **YouTube:** https://youtu.be/W1_SuJbuXg8?si=rGUSbZ5jwQuBz1K-
 
 ## License
 
